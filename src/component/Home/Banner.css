@@ -1,10 +1,9 @@
 .carousel img {
     height: 80vh;
     object-fit: cover;
-}
-.carousel img {
     position: relative;
 }
+
 .carousel .text {
     position: absolute;
     top: 50%;
@@ -35,4 +34,46 @@
 .carousel .carousel-item.active .button {
     opacity: 1;
     margin-left: 0;
+}
+@media (max-width: 1000px) {
+    .carousel .text {
+        left: 10%;
+        transform: translateY(-50%);
+    }
+    .carousel .text h3 {
+        font-size: 15px;
+    }
+    .carousel .text .button {
+        font-size: 15px;
+    }
+    .carousel .text p {
+        font-size: 15px;
+    }
+}
+@media (max-width: 768px) {
+    .carousel .text {
+        left: 10%;
+        transform: translateY(-50%);
+    }
+    .carousel .text h3 {
+        font-size: 15px;
+    }
+    .carousel .text .button {
+        padding: 20px;
+    }
+    .carousel .text p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel .text h3 {
+        font-size: 15px;
+    }
+    .carousel .text .button {
+        padding: 15px;
+    }
+    .carousel .text p {
+        font-size: 15px;
+    }
 }

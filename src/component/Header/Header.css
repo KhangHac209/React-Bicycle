@@ -57,6 +57,10 @@
 }
 .header .cart a {
     font-size: 25px;
+    transition: 0.3s;
+}
+.header .cart a:hover {
+    color: orange;
 }
 .header .cart span {
     position: absolute;
@@ -64,10 +68,10 @@
     background-color: var(--secondary-color);
     color: white;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    top: -8px;
-    left: 20px;
+    width: 23px;
+    height: 23px;
+    top: -14px;
+    left: 17px;
 }
 .header .choice a {
     font-weight: 600;
