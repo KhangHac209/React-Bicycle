@@ -1,0 +1,38 @@
+.carousel img {
+    height: 80vh;
+    object-fit: cover;
+}
+.carousel img {
+    position: relative;
+}
+.carousel .text {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translateY(-50%);
+    font-family: var(--font-sencondary);
+    padding: 10px;
+}
+.carousel .text h3 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: 0.5s;
+    margin-left: 40px;
+}
+.carousel .text .button {
+    opacity: 0;
+    margin-left: 20px;
+}
+.carousel .text p {
+    margin-bottom: 50px;
+    opacity: 0;
+    transition: 0.8s;
+    margin-left: 20px;
+}
+.carousel .carousel-item.active h3,
+.carousel .carousel-item.active p,
+.carousel .carousel-item.active .button {
+    opacity: 1;
+    margin-left: 0;
+}
