@@ -48,7 +48,7 @@ const Header = () => {
                         <Nav className="choice me-auto my-5 my-lg-0" navbarScroll>
                             <NavLink to="/">HOME</NavLink>
                             <NavLink to="/about">ABOUT US</NavLink>
-                            <NavLink to="/product">PRODUCT</NavLink>
+                            <NavLink to="/product">PRODUCTS</NavLink>
                             <NavLink to="/contact">CONTACT</NavLink>
                         </Nav>
                         <div className="search d-flex">

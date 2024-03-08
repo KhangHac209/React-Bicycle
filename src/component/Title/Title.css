@@ -1,0 +1,20 @@
+.title {
+    font-family: var(--font-sencondary);
+}
+.hook {
+    padding: 10px 50px;
+}
+.hook h3 {
+    position: relative;
+    color: var(--secondary-color);
+    font-size: 19px;
+}
+.hook h3::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid rgb(134, 132, 132);
+    padding: 2px;
+    width: 22px;
+    top: 8px;
+    left: -25px;
+}

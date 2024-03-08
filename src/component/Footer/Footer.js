@@ -93,7 +93,7 @@ const Footer = () => {
             </Row>
             <div className="line">
                 <p>
-                    Copyright &#169; 2024 <span>GO CYCLE</span>. All Rights Reserved By <span>Khang</span>
+                    Copyright &#169; 2024 <span>GO CYCLE</span> by <span>Khang</span>. All Rights Reserved.
                 </p>
             </div>
         </div>
