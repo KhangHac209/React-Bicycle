@@ -7,8 +7,9 @@
 body {
     --primary-color: black;
     --secondary-color: rgb(11, 186, 72);
-    --font-sencondary:"Orbitron", Sans-serif;
+    --font-sencondary: "Orbitron", Sans-serif;
     font-family: "Inter", Arial, Helvetica, sans-serif;
+    /* overflow-x: hidden; */
 }
 img {
     width: 100%;
@@ -24,6 +25,5 @@ a.active {
 }
 ul {
     list-style: none;
-    padding-left:  0;
+    padding-left: 0;
 }
-

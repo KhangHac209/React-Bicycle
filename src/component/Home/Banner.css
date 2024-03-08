@@ -68,12 +68,13 @@
 
 @media (max-width: 576px) {
     .carousel .text h3 {
-        font-size: 15px;
+        font-size: 10px;
     }
     .carousel .text .button {
-        padding: 15px;
+        padding: 8px;
+        font-size: 10px;
     }
     .carousel .text p {
-        font-size: 15px;
+        font-size: 10px;
     }
 }

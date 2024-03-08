@@ -90,7 +90,9 @@
 }
 @media (max-width: 480px) {
     .header .info .left {
-        display: flex;
-        flex-direction: column;
+        display: none;
+    }
+    .header img {
+        width: 120px;
     }
 }

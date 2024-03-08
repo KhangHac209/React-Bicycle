@@ -51,13 +51,21 @@ const ListProduct = () => {
             <Title sub="Our Products" title="All Products"></Title>
             <div className="slider-container">
                 <Slider {...settings}>
-                    {listProduct && listProduct.map((item) => <CardProduct id={item.id} key={item.id} thumb={item.thumb} brand={item.brand} price={item.price} name={item.name}></CardProduct>)}
+                    {listProduct &&
+                        listProduct.map((item) => (
+                            <CardProduct id={item.id} key={item.id} discount={item.discount} thumb={item.thumb} brand={item.brand} price={item.price} name={item.name}></CardProduct>
+                        ))}
                 </Slider>
             </div>
             <Title sub="Sale Off 30%" title="Sale Products"></Title>
             <div className="slider-container">
                 <Slider {...settings}>
-                    {listProduct && listProduct.map((item) => <CardProduct id={item.id} key={item.id} thumb={item.thumb} brand={item.brand} price={item.price} name={item.name}></CardProduct>)}
+                    {listProduct &&
+                        listProduct.map((item) => {
+                            if (item.discount !== 0) {
+                                return <CardProduct id={item.id} key={item.id} discount={item.discount} thumb={item.thumb} brand={item.brand} price={item.price} name={item.name}></CardProduct>;
+                            }
+                        })}
                 </Slider>
             </div>
         </Container>

@@ -1,5 +1,6 @@
 .title {
     font-family: var(--font-sencondary);
+    margin: 20px 0;
 }
 .hook {
     padding: 10px 50px;
