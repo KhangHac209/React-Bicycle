@@ -1,4 +1,4 @@
-.hook h3::after {
+.contact .hook h3::after {
     display: none;
 }
 .contact {
