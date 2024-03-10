@@ -1,6 +1,9 @@
 .products {
     margin: 20px 0;
 }
+.brand {
+    margin-bottom: 20px;
+}
 .brand input {
     border: none;
     outline: none;
@@ -11,11 +14,19 @@
 .brand .inputSearch {
     border: 1px solid gray;
     width: 20%;
-    padding: 10px 10px;
+    padding: 10px 20px;
+    width: 95%;
     margin: 20px 0;
 }
 .brand ul li {
     font-family: var(--font-sencondary);
     font-size: 20px;
     cursor: pointer;
+    margin: 10px 0;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.brand ul li:hover {
+    color: orange;
+    font-weight: bold;
 }
