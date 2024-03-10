@@ -13,7 +13,8 @@ const Header = () => {
                             <i class="fa-solid fa-location-dot"></i> 31/2 Nguyen Binh Khiem, P.Dakao, Q.1
                         </span>
                         <span>
-                            <i class="fa-solid fa-phone"></i> 0708240602
+                            <i class="fa-solid fa-phone"></i>
+                            (+84) 708-240-602
                         </span>
                     </div>
                     <div className="right">
