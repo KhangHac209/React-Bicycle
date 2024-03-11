@@ -7,6 +7,7 @@ import Backtop from "./component/Backtop";
 import AboutUs from "./component/About/AboutUs";
 import Products from "./component/Products/Products";
 import Contact from "./component/Contact/Contact";
+import DetailProduct from "./component/DetailProduct/DetailProduct";
 function App() {
     return (
         <div>
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/about" element={<AboutUs></AboutUs>}></Route>
                 <Route path="/product" element={<Products></Products>}></Route>
                 <Route path="/contact" element={<Contact></Contact>}></Route>
+                <Route path="/detail/:slug" element={<DetailProduct></DetailProduct>}></Route>
             </Routes>
             <Backtop></Backtop>
             <Footer></Footer>

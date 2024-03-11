@@ -47,12 +47,12 @@
     top: 10px;
     left: 10px;
 }
-.card-product .price {
+.price {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.card-product .priceOld {
+.priceOld {
     text-decoration: line-through;
     color: rgb(188, 185, 185);
     font-size: 16px;

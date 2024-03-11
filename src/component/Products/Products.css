@@ -27,6 +27,34 @@
     overflow: hidden;
 }
 .brand ul li:hover {
-    color: orange;
     font-weight: bold;
+}
+.products h4 {
+    font-family: var(--font-sencondary);
+    margin-left: 10px;
+    font-size: 30px;
+}
+.products .option {
+    display: inline-block;
+    list-style: none;
+}
+.products .option li {
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.5s;
+    font-family: var(--font-sencondary);
+}
+
+@media (max-width: 900px) {
+    .products .option {
+        display: flex;
+        gap: 20px;
+    }
+    .products .option li {
+        display: inline-block;
+        font-size: 15px;
+    }
 }
