@@ -3,7 +3,7 @@ import Banner from "./Banner";
 import ListProduct from "../ListProduct/ListProduct";
 import AboutUs from "../About/AboutUs";
 import Review from "../Review/Review";
-import BrandProduct from "../About/BrandProduct/BrandProduct";
+import BrandProduct from "../BrandProduct/BrandProduct";
 
 const Home = () => {
     return (

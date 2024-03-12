@@ -8,40 +8,29 @@ const Products = () => {
     const [choice, setChoice] = useState();
     const [filterProduct, setFilterProduct] = useState();
     const [filterName, setFilterName] = useState("All Products");
-    const [checkFilter, setCheckFilter] = useState(0);
+    const [priceFilter, setPriceFilter] = useState({ min: 0, max: 100000 });
     useEffect(() => {
         setFilterProduct(listProduct);
     }, [listProduct]);
     const handleChoice = (choice, type) => {
         setChoice(choice);
         setFilterName(type);
-        if (!checkFilter) {
-            //neu chua filter thi filter tu list
-            const optionChoice = listProduct.filter((item) => item.brand === type);
-            setFilterProduct(optionChoice);
-        } else {
-            // neu co thi lay mang da filter roi filter tiep tuc
-            const optionChoice = filterProduct.filter((item) => item.brand === type);
-            setFilterProduct(optionChoice);
-        }
-        setCheckFilter(true);
     };
     const [price, setPrice] = useState();
     const handlePrice = (price, min, max) => {
         setPrice(price);
-        if (min >= 0 && max >= 0) {
-            if (!checkFilter) {
-                const optionPrice = listProduct.filter((item) => item.price - item.price * (item.discount / 100) >= min && item.price - item.price * (item.discount / 100) <= max);
-                setFilterProduct(optionPrice);
-            } else {
-                const optionPrice = filterProduct.filter((item) => item.price - item.price * (item.discount / 100) >= min && item.price - item.price * (item.discount / 100) <= max);
-                setFilterProduct(optionPrice);
-            }
-            setCheckFilter(true);
-        } else {
-            setFilterProduct(listProduct);
-        }
+        setPriceFilter({ min, max });
     };
+    useEffect(() => {
+        const filteredProduct = listProduct.filter((item) => {
+            if (filterName == "All Products") {
+                return item.price >= priceFilter.min && item.price <= priceFilter.max;
+            } else {
+                return item.brand === filterName && item.price >= priceFilter.min && item.price <= priceFilter.max;
+            }
+        });
+        setFilterProduct(filteredProduct);
+    }, [choice, price]);
     return (
         <div className="products">
             <Container>

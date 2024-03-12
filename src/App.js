@@ -8,6 +8,7 @@ import AboutUs from "./component/About/AboutUs";
 import Products from "./component/Products/Products";
 import Contact from "./component/Contact/Contact";
 import DetailProduct from "./component/DetailProduct/DetailProduct";
+import AutoTop from "./component/AutoTop";
 function App() {
     return (
         <div>
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/contact" element={<Contact></Contact>}></Route>
                 <Route path="/detail/:slug" element={<DetailProduct></DetailProduct>}></Route>
             </Routes>
+            <AutoTop></AutoTop>
             <Backtop></Backtop>
             <Footer></Footer>
         </div>

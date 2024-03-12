@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./BrandProduct.css";
 import { Col, Container, Row } from "react-bootstrap";
-import Title from "../../Title/Title";
-import useFetch from "../../../useFetch";
-import CardProduct from "../../CardProduct/CardProduct";
+import Title from "../Title/Title";
+import useFetch from "../../useFetch";
+import CardProduct from "../CardProduct/CardProduct";
 const BrandProduct = () => {
     const listProduct = useFetch("https://65e5c93dd7f0758a76e762d6.mockapi.io/product");
     const [choice, setChoice] = useState(1);
