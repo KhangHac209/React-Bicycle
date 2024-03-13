@@ -9,6 +9,10 @@ import Products from "./component/Products/Products";
 import Contact from "./component/Contact/Contact";
 import DetailProduct from "./component/DetailProduct/DetailProduct";
 import AutoTop from "./component/AutoTop";
+import CartProduct from "./component/CartProduct/CartProduct";
+import Order from "./component/Order/Order";
+import Blog from "./component/Blog/Blog";
+import DetailBlog from "./component/Blog/DetailBlog";
 function App() {
     return (
         <div>
@@ -16,9 +20,13 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home></Home>}></Route>
                 <Route path="/about" element={<AboutUs></AboutUs>}></Route>
+                <Route path="/blog" element={<Blog></Blog>}></Route>
+                <Route path="/detailBlog/:slug" element={<DetailBlog></DetailBlog>}></Route>
                 <Route path="/product" element={<Products></Products>}></Route>
                 <Route path="/contact" element={<Contact></Contact>}></Route>
                 <Route path="/detail/:slug" element={<DetailProduct></DetailProduct>}></Route>
+                <Route path="/cart" element={<CartProduct></CartProduct>}></Route>
+                <Route path="/order" element={<Order></Order>}></Route>
             </Routes>
             <AutoTop></AutoTop>
             <Backtop></Backtop>

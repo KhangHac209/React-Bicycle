@@ -50,6 +50,7 @@ const Header = () => {
                             <NavLink to="/">HOME</NavLink>
                             <NavLink to="/about">ABOUT US</NavLink>
                             <NavLink to="/product">PRODUCTS</NavLink>
+                            <NavLink to="/blog">BLOGS</NavLink>
                             <NavLink to="/contact">CONTACT</NavLink>
                         </Nav>
                         <div className="search d-flex">
