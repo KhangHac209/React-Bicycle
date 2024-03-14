@@ -2,5 +2,9 @@
     margin: 20px 0;
 }
 .detailBlog img {
-    width: 50%;
+    width: 80%;
+    margin: 0 auto;
+}
+.detailBlog .thumb {
+    margin: 20px 0;
 }

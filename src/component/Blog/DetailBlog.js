@@ -11,11 +11,11 @@ const DetailBlog = () => {
     return (
         <div className="detailBlog">
             <Container>
-                <div className="thumb">
-                    <img src={blogDetail.thumb} alt="" />
-                </div>
                 <div className="title">
                     <h3>{blogDetail.title}</h3>
+                </div>
+                <div className="thumb">
+                    <img src={blogDetail.thumb} alt="" />
                 </div>
                 <h4>{blogDetail.desc}</h4>
                 <p>{blogDetail.text}</p>

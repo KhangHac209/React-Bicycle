@@ -19,7 +19,7 @@ const Blog = () => {
                                     </div>
                                     <h3>{item.title}</h3>
                                     <p>{item.desc}</p>
-                                    <Button text="Read More"></Button>
+                                    <Button link={`/detailBlog/${item.id}`} text="Read More"></Button>
                                 </Link>
                             </Col>
                         ))}
