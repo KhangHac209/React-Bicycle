@@ -35,7 +35,7 @@ const DetailBlog = () => {
                         <div className="thumbleft">
                             <img src="https://probike.templaza.net/wp-content/uploads/2023/09/about-alice.png" alt="" />
                             <h3>Alice Hayes</h3>
-                            <p>Probike is the world's leading brand of high-quality bicycles and cycling gear. Part of the Probike Group, which was founded in 1972.</p>
+                            <p>Go Cycle is the world's leading brand of high-quality bicycles and cycling gear. Part of the Go Cycle Group, which was founded in 1972.</p>
                         </div>
                         <div className="recent">
                             <h2>Recent Post</h2>

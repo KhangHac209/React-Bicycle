@@ -10,7 +10,7 @@ const Banner = () => {
                 <div className="text">
                     <h3>Here You Find Right City E-Bike</h3>
                     <p>Fast, fun, and functional. That’s what a boost of electric power means for your ride. Whether for recreation or transportation.</p>
-                    <Button text="discover now"></Button>
+                    <Button link={`/product`} text="discover now"></Button>
                 </div>
             </Carousel.Item>
             <Carousel.Item>
@@ -21,7 +21,7 @@ const Banner = () => {
                         It's a fun-loving solution to so many of life’s challenges: parking, polluting, packing – and even pedaling, with powerful electric drive systems that make it fun and easy to
                         get around.
                     </p>
-                    <Button text="discover now"></Button>
+                    <Button link={`/product`} text="discover now"></Button>
                 </div>
             </Carousel.Item>
         </Carousel>

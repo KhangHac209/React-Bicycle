@@ -96,3 +96,15 @@
         width: 120px;
     }
 }
+.listSearch {
+    text-align: center;
+}
+.listSearch h3 {
+    color: var(--secondary-color);
+}
+.listSearch h2 {
+    text-transform: uppercase;
+}
+.listSearch span {
+    text-align: center;
+}

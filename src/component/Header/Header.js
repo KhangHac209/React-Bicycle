@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/logoBicycle.png";
 import { Container, Form, Nav, Navbar } from "react-bootstrap";
 import "./Header.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useCart } from "../../CartContext";
 const Header = () => {
+    const [keySearch, setKeySearch] = useState();
+    const navigate = useNavigate();
+    const { cart } = useCart();
+    const handleSearch = (e) => {
+        if (e.keyCode === 13) {
+            console.log(keySearch);
+            navigate(`/search/${keySearch}`);
+            setKeySearch(""); // truyen value vao search
+        }
+    };
     return (
         <div className="header">
             <Container>
@@ -54,14 +65,22 @@ const Header = () => {
                             <NavLink to="/contact">CONTACT</NavLink>
                         </Nav>
                         <div className="search d-flex">
-                            <Form.Control type="search" placeholder="Search Product" className="inputSearch me-2" aria-label="Search" />
+                            <Form.Control
+                                value={keySearch}
+                                onChange={(e) => setKeySearch(e.target.value)}
+                                onKeyDown={handleSearch}
+                                type="search"
+                                placeholder="Search Product"
+                                className="inputSearch me-2"
+                                aria-label="Search"
+                            />
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <Link to="/cart" className="cart">
-                            <a className="fa-solid fa-cart-shopping"></a>
-                            <span>0</span>
-                        </Link>
                     </Navbar.Collapse>
+                    <Link to="/cart" className="cart">
+                        <a className="fa-solid fa-cart-shopping"></a>
+                        <span>{cart.length}</span>
+                    </Link>
                 </Container>
             </Navbar>
         </div>

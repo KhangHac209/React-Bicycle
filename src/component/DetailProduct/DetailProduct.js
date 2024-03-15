@@ -2,23 +2,44 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import useFetch from "../../useFetch";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import "./DetailProduct.css";
 import Button from "../Button/Button";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useCart } from "../../CartContext";
+
 const DetailProduct = () => {
     const { slug: id } = useParams();
     const listProduct = useFetch(`https://65e5c93dd7f0758a76e762d6.mockapi.io/product/${id}`);
     const [pic, setPic] = useState();
-
+    const [quantity, setQuantity] = useState(1);
+    const { addtoCart } = useCart();
     useEffect(() => {
         setPic(listProduct.thumb);
     }, [listProduct]);
-    console.log(pic);
     const handlePic = (pic) => {
         setPic(pic);
     };
+    const handleAddCart = () => {
+        toast.success("Add Cart Successed !", {
+            position: "top-center",
+            autoClose: 2000,
+        });
+        addtoCart(listProduct);
+    };
+
+    const handleChange = (type) => {
+        if (type === "plus") {
+            setQuantity(quantity + 1);
+        } else if (type === "minus") {
+            if (quantity > 1) {
+                setQuantity(quantity - 1);
+            }
+        }
+    };
+
     useEffect(() => {
         const handleResize = () => {
             // Cập nhật số lượng slidesToShow và slidesToScroll dựa trên kích thước màn hình
@@ -76,12 +97,14 @@ const DetailProduct = () => {
                         </div>
                         <div className="choose">
                             <div className="plus-minus">
-                                <i class="fa-solid fa-minus"></i>
-                                <input type="text" value={1} />
-                                <i class="fa-solid fa-plus"></i>
+                                <i type="minus" onClick={() => handleChange("minus")} class="fa-solid fa-minus"></i>
+                                <input name="quantity" type="text" value={quantity} />
+                                <i type="plus" onClick={() => handleChange("plus")} class="fa-solid fa-plus"></i>
                             </div>
                         </div>
-                        <Button text="ADD TO CART"></Button>
+                        <div className="addcart" onClick={handleAddCart}>
+                            <Button text="ADD TO CART"></Button>
+                        </div>
                     </Col>
                 </Row>
             </Container>

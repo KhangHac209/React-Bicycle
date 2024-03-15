@@ -54,8 +54,13 @@
 }
 .priceOld {
     text-decoration: line-through;
-    color: rgb(188, 185, 185);
+    color: rgb(188, 186, 185);
     font-size: 16px;
+}
+.price .false {
+    font-size: 20px;
+    color: orange;
+    font-weight: bold;
 }
 @media (max-width: 500px) {
     .card-product .price {
