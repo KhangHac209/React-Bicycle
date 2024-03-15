@@ -13,9 +13,11 @@
 }
 .brand .inputSearch {
     border: 1px solid gray;
-    width: 20%;
-    padding: 10px 20px;
-    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
     margin: 20px 0;
 }
 .brand ul li {
@@ -51,10 +53,15 @@
 @media (max-width: 900px) {
     .products .option {
         display: flex;
-        gap: 20px;
+        flex-wrap: wrap; /* Cho phép các phần tử trên cùng một dòng chuyển xuống khi không đủ không gian */
+        justify-content: center; /* Canh giữa các phần tử trong trường hợp không đủ không gian */
     }
     .products .option li {
-        display: inline-block;
+        flex: 0 0 calc(50% - 20px); /* Chia cột thành 2 cột và để 20px khoảng cách giữa chúng */
+        margin-bottom: 10px; /* Khoảng cách giữa các hàng */
         font-size: 15px;
+    }
+    .brand .inputSearch {
+        width: 100%; /* Đảm bảo ô tìm kiếm sử dụng toàn bộ chiều rộng khi trên màn hình nhỏ */
     }
 }
