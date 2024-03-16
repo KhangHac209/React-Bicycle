@@ -26,7 +26,7 @@ const AboutUs = () => {
                             technology and innovative design.
                         </p>
                         <NavLink to="/about">
-                            <Button text="More About Us"></Button>
+                            <Button link="/about" text="More About Us"></Button>
                         </NavLink>
                     </Col>
                 </Row>
@@ -45,7 +45,7 @@ const AboutUs = () => {
                             first to make carbon fiber bikes widely available to the world. We defined the look and feel of modern road racing bikes with our Compact Road technology.
                         </p>
                         <NavLink to="/about">
-                            <Button text="More About Us"></Button>
+                            <Button link="/about" text="More About Us"></Button>
                         </NavLink>
                     </Col>
                 </Row>
