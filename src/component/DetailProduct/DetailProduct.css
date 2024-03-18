@@ -1,11 +1,6 @@
 .detail {
     margin: 20px 0;
 }
-.detail .price .priceDiscount {
-    font-size: 25px;
-    color: orange;
-    font-weight: bold;
-}
 .detail .choose .plus-minus {
     display: flex;
     align-items: center;

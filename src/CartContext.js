@@ -4,21 +4,26 @@ const CartContext = createContext();
 const CartProvider = ({ children }) => {
     const [cart, setCart] = useState(localStorage.getItem("LIST_BICYLE") ? JSON.parse(localStorage.getItem("LIST_BICYLE")) : []);
 
-    const addtoCart = (product) => {
+    const addtoCart = (product, inputQuantity) => {
         const newCart = [...cart];
 
         const checkIndexProduct = newCart.findIndex((item) => item.id === product.id);
         if (checkIndexProduct >= 0) {
-            newCart[checkIndexProduct].quantity++;
+            newCart[checkIndexProduct].quantity += inputQuantity; //lay value cua input
         } else {
-            product.quantity = 1;
+            product.quantity = inputQuantity;
             newCart.push(product);
         }
         setCart(newCart);
         localStorage.setItem("LIST_BICYLE", JSON.stringify(newCart));
+        
     };
-
-    return <CartContext.Provider value={{ cart, addtoCart }}>{children}</CartContext.Provider>;
+    const deleteCart = (index) => {
+        const newCart = [...cart];
+        newCart.splice(index, 1);
+        setCart(newCart);
+    };
+    return <CartContext.Provider value={{ cart, addtoCart, deleteCart }}>{children}</CartContext.Provider>;
 };
 
 const useCart = () => {

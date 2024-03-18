@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
 import "./Order.css";
 import CartProduct from "../CartProduct/CartProduct";
 import Button from "../Button/Button";
+import { useCart } from "../../CartContext";
 const Order = () => {
+    const { cart, deleteCart } = useCart();
+    const [listCart, setListCart] = useState(cart);
+    const handleChange = (id, type) => {
+        const newCart = [...listCart];
+        const indexProduct = listCart.findIndex((item) => item.id === id);
+        console.log(indexProduct);
+        if (type === "delete") {
+            newCart.splice(indexProduct, 1);
+            deleteCart(indexProduct);
+        }
+        setListCart(newCart);
+        localStorage.setItem("LIST_BICYLE", JSON.stringify(newCart));
+    };
     return (
         <div className="order">
             <Container>
@@ -29,29 +43,45 @@ const Order = () => {
                             <Table>
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>ID</th>
                                         <th>Name Product</th>
                                         <th>Image</th>
                                         <th>Quantity</th>
-                                        <th>Price</th>
+                                        <th>Total</th>
                                         <th>Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Mountain Bike Pedals</td>
-                                        <td>
-                                            <img src="https://htmldemo.net/rideo/rideo/img/cart/1.jpg" alt="" />
-                                        </td>
-                                        <td>
-                                            <input type="text" value={1} />
-                                        </td>
-                                        <td>100.000 $</td>
-                                        <td>
-                                            <i class="fa-solid fa-trash"></i>
-                                        </td>
-                                    </tr>
+                                    {listCart &&
+                                        listCart.map((item) => (
+                                            <tr>
+                                                <td>{item.id}</td>
+                                                <td>{item.name}</td>
+                                                <td>
+                                                    <img src={item.thumb} alt="" />
+                                                </td>
+                                                <td>
+                                                    <div className="plus-minus">
+                                                        <input type="text" value={item.quantity} />
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p className="price">
+                                                        {item.discount === 0 ? (
+                                                            <span className={` ${item.discount !== 0 && "priceOld"}`}>{item.price * item.quantity}.00 $</span>
+                                                        ) : (
+                                                            <span>
+                                                                {item.discount !== 0 && <div className="priceDiscount">{(item.price - item.price * (item.discount / 100)) * item.quantity}.00 $</div>}
+                                                            </span>
+                                                        )}
+                                                    </p>
+                                                </td>
+
+                                                <td>
+                                                    <i class="fa-solid fa-trash" onClick={() => handleChange(item.id, "delete")}></i>
+                                                </td>
+                                            </tr>
+                                        ))}
                                 </tbody>
                             </Table>
                         </div>
@@ -63,10 +93,22 @@ const Order = () => {
                                     <a href="">Submit</a>
                                 </div>
                                 <h3>
-                                    Quantity: <span>4</span>
+                                    Quantity: <span>{listCart.reduce((total, item) => total + item.quantity, 0)}</span>
                                 </h3>
                                 <h3>
-                                    Total: <span>1000.000$</span>
+                                    Total:{" "}
+                                    <span>
+                                        <span>
+                                            {listCart.reduce((total, item) => {
+                                                if (item.discount != 0) {
+                                                    return total + (item.price - item.price * (item.discount / 100)) * item.quantity;
+                                                } else {
+                                                    return total + item.price * item.quantity;
+                                                }
+                                            }, 0)}
+                                            .00 $
+                                        </span>
+                                    </span>
                                 </h3>
                             </div>
                             <Button text="Place Order"></Button>

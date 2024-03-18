@@ -52,11 +52,7 @@
     align-items: center;
     gap: 10px;
 }
-.priceOld {
-    text-decoration: line-through;
-    color: rgb(188, 186, 185);
-    font-size: 16px;
-}
+
 .price .false {
     font-size: 20px;
     color: orange;

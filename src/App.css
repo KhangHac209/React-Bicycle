@@ -27,3 +27,18 @@ ul {
     list-style: none;
     padding-left: 0;
 }
+.priceDiscount {
+    font-size: 25px;
+    color: orange;
+    font-weight: bold;
+}
+.priceOld {
+    text-decoration: line-through;
+    color: rgb(188, 186, 185);
+    font-size: 16px;
+}
+.price .false {
+    font-size: 20px;
+    color: orange;
+    font-weight: bold;
+}

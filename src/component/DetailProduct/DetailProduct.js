@@ -27,7 +27,7 @@ const DetailProduct = () => {
             position: "top-center",
             autoClose: 2000,
         });
-        addtoCart(listProduct);
+        addtoCart(listProduct, quantity);
     };
 
     const handleChange = (type) => {
