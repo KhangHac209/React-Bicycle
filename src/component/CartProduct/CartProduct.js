@@ -59,9 +59,9 @@ const CartProduct = () => {
                                             </td>
                                             <td>
                                                 <div className="plus-minus">
-                                                    <i class="fa-solid fa-minus" onClick={() => handleChange(item.id, "minus")}></i>
+                                                    <i className="fa-solid fa-minus" onClick={() => handleChange(item.id, "minus")}></i>
                                                     <input type="text" value={item.quantity} />
-                                                    <i class="fa-solid fa-plus" onClick={() => handleChange(item.id, "plus")}></i>
+                                                    <i className="fa-solid fa-plus" onClick={() => handleChange(item.id, "plus")}></i>
                                                 </div>
                                             </td>
                                             <td>
@@ -77,7 +77,7 @@ const CartProduct = () => {
                                             </td>
 
                                             <td>
-                                                <i class="fa-solid fa-trash" onClick={() => handleChange(item.id, "delete")}></i>
+                                                <i className="fa-solid fa-trash" onClick={() => handleChange(item.id, "delete")}></i>
                                             </td>
                                         </tr>
                                     ))}

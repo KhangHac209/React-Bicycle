@@ -73,3 +73,29 @@
 .order .priceDiscount {
     font-size: 20px;
 }
+/* Thiết kế đáp ứng cho textarea */
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Cho phép thay đổi kích thước theo chiều dọc */
+    min-height: 100px; /* Đặt chiều cao tối thiểu */
+}
+
+/* Điều chỉnh kích thước và font chữ cho các kích thước màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    textarea {
+        font-size: 14px;
+        min-height: 80px;
+    }
+}
+
+/* Điều chỉnh kích thước và font chữ cho các kích thước màn hình nhỏ hơn */
+@media (max-width: 480px) {
+    textarea {
+        font-size: 12px;
+        min-height: 60px;
+    }
+}

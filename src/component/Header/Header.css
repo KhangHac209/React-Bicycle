@@ -78,16 +78,24 @@
     margin: 0 20px;
     font-family: var(--font-sencondary);
 }
-@media (max-width: 768px) {
-    .header .info .right {
-        display: none;
+@media (max-width: 995px) {
+    .header .cart {
+        order: 1; /* Đảo vị trí của phần giỏ hàng và biểu tượng thanh điều hướng */
+    }
+
+    .navbar-toggler {
+        order: 2; /* Đảo vị trí của phần giỏ hàng và biểu tượng thanh điều hướng */
     }
 }
 @media (max-width: 768px) {
     .header .info .right {
         display: none;
     }
+    .header .info .right {
+        display: none;
+    }
 }
+
 @media (max-width: 480px) {
     .header .info .left {
         display: none;

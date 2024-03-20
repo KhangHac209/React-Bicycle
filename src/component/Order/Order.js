@@ -54,7 +54,7 @@ const Order = () => {
                                 <tbody>
                                     {listCart &&
                                         listCart.map((item) => (
-                                            <tr>
+                                            <tr key={item.id}>
                                                 <td>{item.id}</td>
                                                 <td>{item.name}</td>
                                                 <td>
@@ -78,7 +78,7 @@ const Order = () => {
                                                 </td>
 
                                                 <td>
-                                                    <i class="fa-solid fa-trash" onClick={() => handleChange(item.id, "delete")}></i>
+                                                    <i className="fa-solid fa-trash" onClick={() => handleChange(item.id, "delete")}></i>
                                                 </td>
                                             </tr>
                                         ))}

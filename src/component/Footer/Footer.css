@@ -6,6 +6,14 @@
 .footer img {
     width: 200px;
 }
+.footer a {
+    color: rgb(187, 184, 184);
+    transition: 0.5s;
+}
+.footer a:hover {
+    color: orange;
+}
+
 .footer .inform h5 {
     color: gray;
     font-family: var(--font-sencondary);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Form, Nav, NavLink, Navbar, Row } from "react-bootstrap";
+import { Col, Container, NavLink, Navbar, Row } from "react-bootstrap";
 import logo from "../../../src/assets/logoBicycle.png";
 import "./Footer.css";
 import { Link } from "react-router-dom";
@@ -11,9 +11,9 @@ const Footer = () => {
                     <Navbar expand="lg" className="bg-body-dark">
                         <Container>
                             <Navbar.Brand href="#">
-                                <NavLink to="/">
+                                <Link to="/">
                                     <img src={logo} alt="" />
-                                </NavLink>
+                                </Link>
                             </Navbar.Brand>
                         </Container>
                     </Navbar>
@@ -28,17 +28,17 @@ const Footer = () => {
                             <ul>
                                 <li>
                                     <a href="https://www.facebook.com/vo.khang.9847" target="_blank">
-                                        <i class="fa-brands fa-facebook"></i>
+                                        <i className="fa-brands fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://www.instagram.com/vhk209/" target="_blank">
-                                        <i class="fa-brands fa-instagram"></i>
+                                        <i className="fa-brands fa-instagram"></i>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
-                                        <i class="fa-solid fa-envelope"></i>
+                                        <i className="fa-solid fa-envelope"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -49,16 +49,16 @@ const Footer = () => {
                     <h2>Company</h2>
                     <ul>
                         <li>
-                            <NavLink to="/about">About us</NavLink>
+                            <Link to="/about">About us</Link>
                         </li>
                         <li>
-                            <NavLink to="/product">Our Bikes</NavLink>
+                            <Link to="/product">Our Bikes</Link>
                         </li>
                         <li>
-                            <NavLink to="/about">News</NavLink>
+                            <Link to="/blog">News</Link>
                         </li>
                         <li>
-                            <NavLink to="/contact">Contact</NavLink>
+                            <Link to="/contact">Contact</Link>
                         </li>
                     </ul>
                 </Col>
@@ -66,16 +66,16 @@ const Footer = () => {
                     <h2>Help Center</h2>
                     <ul>
                         <li>
-                            <NavLink to="/about">Our Team</NavLink>
+                            <Link to="/about">Our Team</Link>
                         </li>
                         <li>
-                            <NavLink to="/contact">Contact</NavLink>
+                            <Link to="/contact">Contact</Link>
                         </li>
                         <li>
-                            <NavLink to="/about">Device</NavLink>
+                            <Link to="/about">Device</Link>
                         </li>
                         <li>
-                            <NavLink to="/about">About us</NavLink>
+                            <Link to="/about">About us</Link>
                         </li>
                     </ul>
                 </Col>

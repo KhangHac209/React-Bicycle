@@ -57,5 +57,28 @@
 .cart .priceDiscount {
     font-size: 20px;
 }
+
 @media (max-width: 900px) {
+    .cart img {
+        width: 100%; /* Thay đổi kích thước hình ảnh khi màn hình nhỏ hơn 900px */
+    }
+    .cart th,
+    .cart td {
+        font-size: 14px; /* Giảm kích thước font chữ cho bảng khi màn hình nhỏ hơn 900px */
+    }
+    .cart .thID,
+    .cart .thImg {
+        display: none; /* Ẩn các cột ID, Tên sản phẩm và Ảnh khi màn hình nhỏ hơn 900px */
+    }
+    .cart .plus-minus {
+        width: 100%; /* Thay đổi chiều rộng của các phần tử 'plus-minus' khi màn hình nhỏ hơn 900px */
+    }
+    .cart .plus-minus input {
+        width: 40%; /* Thay đổi chiều rộng của input quantity khi màn hình nhỏ hơn 900px */
+    }
+    .cart .total {
+        flex-direction: column; /* Thay đổi hướng của flex container thành dọc khi màn hình nhỏ hơn 900px */
+        align-items: flex-end; /* Căn phần tử về phía phải của flex container khi màn hình nhỏ hơn 900px */
+    }
 }
+

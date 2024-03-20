@@ -21,10 +21,10 @@ const Header = () => {
                 <div className="info">
                     <div className="left">
                         <span>
-                            <i class="fa-solid fa-location-dot"></i> 31/2 Nguyen Binh Khiem, P.Dakao, Q.1
+                            <i className="fa-solid fa-location-dot"></i> 31/2 Nguyen Binh Khiem, P.Dakao, Q.1
                         </span>
                         <span>
-                            <i class="fa-solid fa-phone"></i>
+                            <i className="fa-solid fa-phone"></i>
                             (+84) 708-240-602
                         </span>
                     </div>
@@ -32,17 +32,17 @@ const Header = () => {
                         <ul>
                             <li>
                                 <a href="https://www.facebook.com/vo.khang.9847" target="_blank">
-                                    <i class="fa-brands fa-facebook"></i>
+                                    <i className="fa-brands fa-facebook"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/vhk209/" target="_blank">
-                                    <i class="fa-brands fa-instagram"></i>
+                                    <i className="fa-brands fa-instagram"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
-                                    <i class="fa-solid fa-envelope"></i>
+                                    <i className="fa-solid fa-envelope"></i>
                                 </a>
                             </li>
                         </ul>
@@ -74,7 +74,7 @@ const Header = () => {
                                 className="inputSearch me-2"
                                 aria-label="Search"
                             />
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i className="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </Navbar.Collapse>
                     <Link to="/cart" className="cart">

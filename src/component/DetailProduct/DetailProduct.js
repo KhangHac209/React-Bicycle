@@ -97,9 +97,9 @@ const DetailProduct = () => {
                         </div>
                         <div className="choose">
                             <div className="plus-minus">
-                                <i type="minus" onClick={() => handleChange("minus")} class="fa-solid fa-minus"></i>
+                                <i type="minus" onClick={() => handleChange("minus")} className="fa-solid fa-minus"></i>
                                 <input name="quantity" type="text" value={quantity} />
-                                <i type="plus" onClick={() => handleChange("plus")} class="fa-solid fa-plus"></i>
+                                <i type="plus" onClick={() => handleChange("plus")} className="fa-solid fa-plus"></i>
                             </div>
                         </div>
                         <div className="addcart" onClick={handleAddCart}>

@@ -40,7 +40,7 @@ const Products = () => {
                             <h2>Brand Products</h2>
                             <div className="inputSearch">
                                 <input type="text" placeholder="Search Brand Products" />
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i className="fa-solid fa-magnifying-glass"></i>
                             </div>
                             <ul className="option">
                                 <li onClick={() => handleChoice(1, "Lapierre")} className={`choice ${choice === 1 && "active"}`}>
