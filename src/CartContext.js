@@ -16,14 +16,16 @@ const CartProvider = ({ children }) => {
         }
         setCart(newCart);
         localStorage.setItem("LIST_BICYLE", JSON.stringify(newCart));
-        
     };
     const deleteCart = (index) => {
         const newCart = [...cart];
         newCart.splice(index, 1);
         setCart(newCart);
     };
-    return <CartContext.Provider value={{ cart, addtoCart, deleteCart }}>{children}</CartContext.Provider>;
+    const deleteAllCart = () => {
+        setCart([]);
+    };
+    return <CartContext.Provider value={{ cart, addtoCart, deleteCart, deleteAllCart }}>{children}</CartContext.Provider>;
 };
 
 const useCart = () => {
