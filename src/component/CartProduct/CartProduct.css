@@ -54,9 +54,7 @@
 .cart .price {
     display: inline-block;
 }
-.cart .priceDiscount {
-    font-size: 20px;
-}
+
 
 @media (max-width: 900px) {
     .cart img {

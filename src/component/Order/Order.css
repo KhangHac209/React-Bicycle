@@ -99,9 +99,7 @@
 .order .coupon a:hover {
     background-color: var(--secondary-color);
 }
-.order .priceDiscount {
-    font-size: 20px;
-}
+
 /* Thiết kế đáp ứng cho textarea */
 textarea {
     width: 100%;
