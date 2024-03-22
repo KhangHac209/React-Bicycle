@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { Col, Container, Row, Table } from "react-bootstrap";
 import "./Order.css";
@@ -9,6 +9,18 @@ import { useNavigate } from "react-router-dom";
 const Order = () => {
     const { cart, deleteCart, deleteAllCart } = useCart();
     const [listCart, setListCart] = useState(cart);
+    const navigate = useNavigate();
+    const inputRef = useRef();
+    useEffect(() => {
+        if (listCart.length === 0) {
+            toast.error("No Products In The Cart !", {
+                position: "top-center",
+                autoClose: 1000,
+            });
+            navigate("/");
+        }
+        inputRef.current.focus();
+    }, [listCart, navigate]);
     const handleChange = (id, type) => {
         const newCart = [...listCart];
         const indexProduct = listCart.findIndex((item) => item.id === id);
@@ -34,7 +46,6 @@ const Order = () => {
             [e.target.name]: e.target.value,
         });
     };
-    const navigate = useNavigate();
     const sendInformOrder = async (e) => {
         e.preventDefault();
         if (!form.first_name || !form.last_name || !form.email || !form.address || !form.city || !form.note) {
@@ -75,16 +86,20 @@ const Order = () => {
             }
         }
     };
+    const handleBack = () => {
+        navigate("/cart");
+    };
     return (
         <div className="order">
             <Container>
+                <i onClick={handleBack} class="fa-solid fa-angles-left back"></i>
                 <form onSubmit={sendInformOrder}>
                     <Row>
                         <Col lg={6} md={6}>
                             <div className="inform">
                                 <h2>Shipping Address</h2>
                                 <div className="name">
-                                    <input type="text" name="first_name" placeholder="First Name" onChange={handleValue} />
+                                    <input ref={inputRef} type="text" name="first_name" placeholder="First Name" onChange={handleValue} />
                                     <input type="text" name="last_name" placeholder="Last Name" onChange={handleValue} />
                                 </div>
                                 <div className="address">

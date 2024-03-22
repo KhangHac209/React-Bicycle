@@ -49,7 +49,7 @@
 }
 .header img {
     width: 150px;
-    margin-right: 80px;
+    margin-right: 50px;
 }
 .header .cart {
     margin-left: 50px;
@@ -68,15 +68,25 @@
     background-color: var(--secondary-color);
     color: white;
     border-radius: 50%;
-    width: 23px;
-    height: 23px;
+    width: 27px;
+    height: 25px;
     top: -14px;
     left: 17px;
 }
+.header .choice {
+    gap: 20px;
+}
 .header .choice a {
     font-weight: 600;
-    margin: 0 20px;
     font-family: var(--font-sencondary);
+}
+.header .login {
+    margin-left: 40px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.header .login:hover {
+    color: orange;
 }
 @media (max-width: 995px) {
     .header .cart {

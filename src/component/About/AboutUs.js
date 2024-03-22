@@ -18,7 +18,7 @@ const AboutUs = () => {
                     <Col lg={6} md={12}>
                         <Title sub="About Us" title="Bicycles Are Our Works, But Also Our Passion"></Title>
                         <p>
-                            Each of us has our own challenges, goals and reasons to ride. At Probike, our purpose is to help you unleash your full potential no matter the chosen path. We do this with
+                            Each of us has our own challenges, goals and reasons to ride. At Go Cycle, our purpose is to help you unleash your full potential no matter the chosen path. We do this with
                             our products, our people and the stories we share. Come feel what it's like to be limitless. Come ride with us.
                         </p>
                         <p>

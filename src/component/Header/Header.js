@@ -10,7 +10,6 @@ const Header = () => {
     const { cart } = useCart();
     const handleSearch = (e) => {
         if (e.keyCode === 13) {
-            console.log(keySearch);
             navigate(`/search/${keySearch}`);
             setKeySearch(""); // truyen value vao search
         }
@@ -81,6 +80,9 @@ const Header = () => {
                         <a className="fa-solid fa-cart-shopping"></a>
                         <span>{cart.length}</span>
                     </Link>
+                    {/* <Link to="/login" className="login">
+                        <i className="fa-solid fa-user"></i>
+                    </Link> */}
                 </Container>
             </Navbar>
         </div>

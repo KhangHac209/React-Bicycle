@@ -17,6 +17,7 @@ import Search from "./component/Header/Search";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { CartProvider } from "./CartContext";
+import Login from "./component/Login/Login";
 function App() {
     return (
         <div>
@@ -34,6 +35,7 @@ function App() {
                     <Route path="/cart" element={<CartProduct></CartProduct>}></Route>
                     <Route path="/order" element={<Order></Order>}></Route>
                     <Route path="/search/:slug" element={<Search></Search>}></Route>
+                    <Route path="/login" element={<Login></Login>}></Route>
                 </Routes>
                 <AutoTop></AutoTop>
                 <Backtop></Backtop>

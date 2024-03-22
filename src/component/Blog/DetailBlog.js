@@ -1,17 +1,21 @@
 import React, { useEffect } from "react";
 import blog from "./DataBlog";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Col, Container, Row } from "react-bootstrap";
 import "./DetailBlog.css";
 const DetailBlog = () => {
     const { slug: id } = useParams();
     const blogDetail = blog.find((item) => item.id === Number(id));
-    console.log(blogDetail);
-
+    const navigate = useNavigate();
+    const handleBack = () => {
+        navigate("/blog");
+    };
     return (
         <div className="detailBlog">
             <Container>
                 <Row>
+                    <i onClick={handleBack} class="fa-solid fa-angles-left back"></i>
+
                     <Col lg={8} md={8}>
                         <div className="title">
                             <h3>{blogDetail.title}</h3>

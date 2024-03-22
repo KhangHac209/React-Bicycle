@@ -89,6 +89,11 @@
     align-items: center;
     gap: 20px;
 }
+.back {
+    font-size: 30px;
+    color: orange;
+    cursor: pointer;
+}
 .order .coupon a {
     padding: 10px 15px;
     background-color: orange;
