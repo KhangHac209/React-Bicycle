@@ -18,7 +18,7 @@ const Header = () => {
         }
     };
     const navbarRef = useRef();
-    console.log(login.data[0].emailRegister);
+    // console.log(login.data[0].emailRegister);
     useEffect(() => {
         navbarRef.current.classList.remove("show");
     }, [navigate]);
