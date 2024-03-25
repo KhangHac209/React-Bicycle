@@ -44,7 +44,7 @@ const BrandProduct = () => {
                 <Row>
                     {filterProduct &&
                         filterProduct.map((item) => (
-                            <Col lg={4}>
+                            <Col lg={4} key={item.id}>
                                 <CardProduct id={item.id} key={item.id} discount={item.discount} thumb={item.thumb} brand={item.brand} price={item.price} name={item.name}></CardProduct>
                             </Col>
                         ))}

@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../../assets/logoBicycle.png";
 import { Container, Form, Nav, Navbar } from "react-bootstrap";
 import "./Header.css";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useCart } from "../../CartContext";
 const Header = () => {
+    const [login, setLogin] = useState(localStorage.getItem("LIST_BICYLE") ? JSON.parse(localStorage.getItem("LIST_LOGIN")) : []);
     const [keySearch, setKeySearch] = useState();
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
     const { cart } = useCart();
     const handleSearch = (e) => {
         if (e.keyCode === 13) {
@@ -14,6 +17,12 @@ const Header = () => {
             setKeySearch(""); // truyen value vao search
         }
     };
+    const navbarRef = useRef();
+    console.log(login.data[0].emailRegister);
+    useEffect(() => {
+        navbarRef.current.classList.remove("show");
+    }, [navigate]);
+
     return (
         <div className="header">
             <Container>
@@ -55,7 +64,7 @@ const Header = () => {
                     </NavLink>
 
                     <Navbar.Toggle aria-controls="navbarScroll" />
-                    <Navbar.Collapse id="navbarScroll">
+                    <Navbar.Collapse id="navbarScroll" ref={navbarRef}>
                         <Nav className="choice me-auto my-5 my-lg-0" navbarScroll>
                             <NavLink to="/">HOME</NavLink>
                             <NavLink to="/about">ABOUT US</NavLink>
@@ -80,9 +89,9 @@ const Header = () => {
                         <a className="fa-solid fa-cart-shopping"></a>
                         <span>{cart.length}</span>
                     </Link>
-                    {/* <Link to="/login" className="login">
+                    <Link to="/login" className="login">
                         <i className="fa-solid fa-user"></i>
-                    </Link> */}
+                    </Link>
                 </Container>
             </Navbar>
         </div>
