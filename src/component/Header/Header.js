@@ -89,9 +89,9 @@ const Header = () => {
                         <a className="fa-solid fa-cart-shopping"></a>
                         <span>{cart.length}</span>
                     </Link>
-                    <Link to="/login" className="login">
+                    {/* <Link to="/login" className="login">
                         <i className="fa-solid fa-user"></i>
-                    </Link>
+                    </Link> */}
                 </Container>
             </Navbar>
         </div>
