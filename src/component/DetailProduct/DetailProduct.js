@@ -102,9 +102,9 @@ const DetailProduct = () => {
                                 <i type="plus" onClick={() => handleChange("plus")} className="fa-solid fa-plus"></i>
                             </div>
                         </div>
-                        <div className="addcart" onClick={handleAddCart}>
-                            <Button text="ADD TO CART"></Button>
-                        </div>
+                        <button className="clickButton" onClick={handleAddCart}>
+                            ADD TO CART
+                        </button>
                     </Col>
                 </Row>
             </Container>

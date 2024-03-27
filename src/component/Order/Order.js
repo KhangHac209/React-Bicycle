@@ -186,7 +186,7 @@ const Order = () => {
                                         </span>
                                     </h3>
                                 </div>
-                                <button className="placeOrder" type="submit">
+                                <button className="clickButton" type="submit">
                                     Place Order
                                 </button>
                             </div>

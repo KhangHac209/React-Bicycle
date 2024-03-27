@@ -1,7 +1,7 @@
 .order {
     margin: 20px 0;
 }
-.placeOrder {
+.clickButton {
     padding: 17px 40px;
     font-family: "Orbitron", Sans-serif;
     cursor: pointer;
@@ -16,13 +16,13 @@
     display: inline-block;
 }
 
-.placeOrder:hover {
+.clickButton:hover {
     letter-spacing: 3px;
     background-color: orange;
     color: hsl(0, 0%, 100%);
 }
 
-.placeOrder:active {
+.clickButton:active {
     letter-spacing: 3px;
     background-color: orange;
     color: hsl(0, 0%, 100%);

@@ -10,7 +10,6 @@ const CartProduct = () => {
     const handleChange = (id, type) => {
         const newCart = [...listCart];
         const indexProduct = listCart.findIndex((item) => item.id === id);
-        console.log(indexProduct);
         if (type === "plus") {
             newCart[indexProduct].quantity++;
         } else if (type === "minus") {
