@@ -55,8 +55,7 @@
     display: inline-block;
 }
 
-
-@media (max-width: 900px) {
+@media (max-width: 991px) {
     .cart img {
         width: 100%; /* Thay đổi kích thước hình ảnh khi màn hình nhỏ hơn 900px */
     }
@@ -65,7 +64,7 @@
         font-size: 14px; /* Giảm kích thước font chữ cho bảng khi màn hình nhỏ hơn 900px */
     }
     .cart .thID,
-    .cart .thImg {
+    .cart .thPrice {
         display: none; /* Ẩn các cột ID, Tên sản phẩm và Ảnh khi màn hình nhỏ hơn 900px */
     }
     .cart .plus-minus {
@@ -79,4 +78,3 @@
         align-items: flex-end; /* Căn phần tử về phía phải của flex container khi màn hình nhỏ hơn 900px */
     }
 }
-

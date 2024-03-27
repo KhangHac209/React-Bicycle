@@ -34,8 +34,8 @@ const CartProduct = () => {
                                 <tr>
                                     <th className="thID">ID</th>
                                     <th className="thName">Name Product</th>
-                                    <th className="thImg">Image</th>
-                                    <th>Price</th>
+                                    <th>Image</th>
+                                    <th className="thPrice">Price</th>
                                     <th>Quantity</th>
                                     <th>Total</th>
                                     <th>Delete</th>
@@ -47,10 +47,10 @@ const CartProduct = () => {
                                         <tr>
                                             <td className="thID">{item.id}</td>
                                             <td>{item.name}</td>
-                                            <td className="thImg">
+                                            <td>
                                                 <img src={item.thumb} alt="" />
                                             </td>
-                                            <td>
+                                            <td className="thPrice">
                                                 <p className="price">
                                                     <span className={` ${item.discount !== 0 && "priceOld"}`}>{item.price}.00 $</span>{" "}
                                                     <span>{item.discount !== 0 && <div className="priceDiscount">{item.price - item.price * (item.discount / 100)}.00 $</div>}</span>

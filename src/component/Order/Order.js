@@ -94,7 +94,7 @@ const Order = () => {
             <Container>
                 <i onClick={handleBack} class="fa-solid fa-angles-left back"></i>
                 <form onSubmit={sendInformOrder}>
-                    <Row>
+                    <Row className="mt-3">
                         <Col lg={6} md={6}>
                             <div className="inform">
                                 <h2>Shipping Address</h2>
@@ -116,19 +116,19 @@ const Order = () => {
                                 <Table>
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                            <th className="thID">ID</th>
                                             <th>Name Product</th>
                                             <th>Image</th>
                                             <th>Quantity</th>
                                             <th>Total</th>
-                                            <th>Delete</th>
+                                            <th className="thDelete">Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {listCart &&
                                             listCart.map((item) => (
                                                 <tr key={item.id}>
-                                                    <td>{item.id}</td>
+                                                    <td className="thID">{item.id}</td>
                                                     <td>{item.name}</td>
                                                     <td>
                                                         <img src={item.thumb} alt="" />
@@ -152,7 +152,7 @@ const Order = () => {
                                                         </p>
                                                     </td>
 
-                                                    <td>
+                                                    <td className="thDelete">
                                                         <i className="fa-solid fa-trash" onClick={() => handleChange(item.id, "delete")}></i>
                                                     </td>
                                                 </tr>
